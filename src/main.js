@@ -1,0 +1,38 @@
+const squares = document.querySelector('.squares');
+
+function checkDataLevel(event){
+  let dataLevel = parseInt(event.target.dataset.level); 
+  switch (dataLevel) {
+    case 0:
+    case 1:
+     event.target.dataset.level = dataLevel + 1;
+      break;
+    case 2:
+      event.target.dataset.level = 0;
+      break; 
+    default:
+      break; 
+  }
+  console.log(dataLevel);
+}
+
+function renderSquares() {
+  for (var i = 1; i < 31; i++) {
+    let count = i
+    const level = Math.floor(Math.random() * 3);
+    squares.insertAdjacentHTML('beforeend', `<li id="${count}" data-level="${level}"></li>`);
+  }
+}
+
+function clickLevel() {
+  const listItems = document.querySelectorAll('li');
+
+  listItems.forEach(item => {
+    item.addEventListener('click', checkDataLevel)
+  });
+};
+
+renderSquares();
+clickLevel();
+
+
