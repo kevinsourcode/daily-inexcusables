@@ -17,9 +17,9 @@ function checkDataLevel(event){
 }
 
 function renderSquares() {
-  for (var i = 1; i < 31; i++) {
-    let count = i
-    const level = Math.floor(Math.random() * 3);
+  for (var i = 1; i < 60; i++) {
+    let count = i;
+    const level = 0;
     squares.insertAdjacentHTML('beforeend', `<li id="${count}" data-level="${level}"></li>`);
   }
 }

@@ -26,7 +26,7 @@ body {
 }
 
 .graph {
-    flex-grow: 1;
+    width: 80%;
 }
 
 
@@ -60,7 +60,7 @@ footer a:hover i {
 
 
 :root {
-    --square-size: 25px;
+    --square-size: 40px;
     --square-gap: 5px;
     --week-width: calc(var(--square-size) + var(--square-gap));
 }
@@ -73,7 +73,7 @@ footer a:hover i {
 .squares {
     display: grid;
     grid-gap: var(--square-gap);
-    grid-template-rows: repeat(6, var(--square-size));
+    grid-template-rows: repeat(4, var(--square-size));
 }
 
 .squares {
@@ -100,4 +100,18 @@ footer a:hover i {
 
 .squares li[data-level="3"] {
     background-color: #196127;
+}
+
+.checklist{
+    text-align: center  ;
+    margin: 0 auto auto auto;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.content{
+    display: flex;
 }
