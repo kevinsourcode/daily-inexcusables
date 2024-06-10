@@ -16,6 +16,7 @@ body {
     height: 100vh;
     font-family: "Satoshi","sans-serif";
     font-size: 12px;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -23,10 +24,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-}
-
-.graph {
-    width: 80%;
 }
 
 
@@ -102,11 +99,6 @@ footer a:hover i {
     background-color: #196127;
 }
 
-.checklist{
-    text-align: center  ;
-    margin: 0 auto auto auto;
-}
-
 ul{
     list-style-type: none;
     padding: 0;
@@ -115,3 +107,16 @@ ul{
 .content{
     display: flex;
 }
+
+.tasks-navbar{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: -48px;
+    transform: translateY(-50%);
+    transition: right 0.3s ease;
+}
+
+.tasks-navbar.open {
+    right: 20px; /* Slide in when navbar is open */
+  }

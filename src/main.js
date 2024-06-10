@@ -32,7 +32,18 @@ function clickLevel() {
   });
 };
 
+
+function navbarDisplayToggle() {
+  const navBar = document.querySelector('.trigger');
+  const navbarElement = document.querySelector('.tasks-navbar');
+
+  navBar.addEventListener('click', () => {
+    navbarElement.classList.toggle('open');
+  });
+}
+
+
+
 renderSquares();
 clickLevel();
-
-
+navbarDisplayToggle();
