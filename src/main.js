@@ -40,6 +40,7 @@ function navbarDisplayToggle() {
   navBar.addEventListener('click', () => {
     navbarElement.classList.toggle('open');
   });
+
 }
 
 

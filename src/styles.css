@@ -42,14 +42,16 @@ footer a:hover i {
 }
 
 .quote{
-    display: inline-block;
+    /* display: inline-block; */
     transform: translateY(-5px);
 }
 
 .graph{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(-30%);
 }
 
 
@@ -112,11 +114,18 @@ ul{
     display: flex;
     position: absolute;
     top: 50%;
-    right: -48px;
-    transform: translateY(-50%);
+    right: -210px;
+    transform: translateY(-70%);
     transition: right 0.3s ease;
 }
 
 .tasks-navbar.open {
     right: 20px; /* Slide in when navbar is open */
   }
+
+
+ul li{
+    padding: 10px;
+    font-size: 30px;
+    display: flex;
+}
