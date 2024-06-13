@@ -110,11 +110,15 @@ ul{
     display: flex;
 }
 
+.trigger{
+    height: 100%;
+}
+
 .tasks-navbar{
     display: flex;
     position: absolute;
     top: 50%;
-    right: -210px;
+    right: -218px;
     transform: translateY(-70%);
     transition: right 0.3s ease;
 }
@@ -128,4 +132,15 @@ ul li{
     padding: 10px;
     font-size: 30px;
     display: flex;
+    align-items: center;
+    gap: 5px;
 }
+
+.checks{
+    height: 20px;
+    width: 20px;
+}
+
+.strike-text {
+    text-decoration: line-through;
+  }

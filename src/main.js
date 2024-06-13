@@ -43,8 +43,26 @@ function navbarDisplayToggle() {
 
 }
 
+function completeTask() {
+  const checkboxes = document.querySelectorAll('.checks');
+
+  checkboxes.forEach(checkbox => {
+    const textElement = checkbox.nextElementSibling;
+    if (checkbox.checked) {
+      textElement.classList.add('strike-text');
+    } else {
+      textElement.classList.remove('strike-text');
+    }
+  });
+}
+
+// Attach event listeners to checkboxes
+document.querySelectorAll('.checks').forEach(checkbox => {
+  checkbox.addEventListener('change', completeTask);
+});
 
 
 renderSquares();
 clickLevel();
 navbarDisplayToggle();
+completeTask();
